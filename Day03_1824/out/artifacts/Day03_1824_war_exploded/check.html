@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #Bigbox{
+            width: 500px;
+            height: 30px;
+            background: red;
+            float: left;
+            position: relative;
+        }
+
+        #Bigbox1{
+            float: left;
+            position: absolute;
+        }
+
+        #Bigbox2{
+            float: left;
+            position: absolute;
+        }
+
+        img{
+            width: 60px;
+            height: 30px;
+            margin-left: 5px;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="Bigbox">
+       <div id="Bigbox1">验证码:<input type="text"><div>
+       <div id="Bigbox2"><img src="/JSP/check" id="imgs"/></div>
+</div>
+
+<script>
+
+    var imgs = document.getElementById("imgs");
+    imgs.onclick = function (ev) {
+        this.src = "/JSP/check?"+ new Date();
+    }
+</script>
+</body>
+</html>
